@@ -1,7 +1,7 @@
 trigger: none
 #pipeline kab chalega
 
-pool: pool
+pool: alokpool
 #pipeline kaha chalega, kis agent me chalega
 
  
@@ -22,10 +22,10 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    backendServiceArm: 'Demo-Service-Connection'
-    backendAzureRmStorageAccountName: 'mystorage836753'
-    backendAzureRmContainerName: 'mystorage836753'
-    backendAzureRmKey: 'statefile'
+    backendServiceArm: 'alokji'
+    backendAzureRmStorageAccountName: 'alokstg'
+    backendAzureRmContainerName: 'alokconct'
+    backendAzureRmKey: 'xyz'
   displayName: terraform init command chal rahi hai
 
 - task: TerraformTask@5
@@ -44,11 +44,11 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'plan'
-    environmentServiceNameAzureRM: 'Demo-Service-Connection'
+    environmentServiceNameAzureRM: 'alokji'
     environmentAzureRmOverrideSubscriptionID: 'cba3453a-ff1f-4f51-b6f6-5a1149843776'
 - task: TerraformTask@5
   inputs:
     provider: 'azurerm'
     command: 'apply'
-    environmentServiceNameAzureRM: 'Demo-Service-Connection'
+    environmentServiceNameAzureRM: 'alokji'
   displayName: terraform apply command run ho rahi hai
