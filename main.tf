@@ -15,7 +15,7 @@ backend "azurerm" {
 
 provider "azurerm" {
   features {}
-subscription_id = "cba3453a-ff1f-4f51-b6f6-5a1149843776"
+subscription_id = "23c0e86f-685e-49e7-957d-37e6b7710a17"
 }
 resource "azurerm_resource_group" "rg" {
   name     = "prod-rg"
